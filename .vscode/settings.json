@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/0db52d12-e1b8-4485-99c3-cb3090741a71/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/tordfalchtest",
+    "appService.deploySubpath": "."
+}
