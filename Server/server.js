@@ -6,7 +6,7 @@ const url = require('url');
 const path = require("path");
 const Game = require('./Game.js'); // Import Game class
 const app = express()
-const port = process.env.PORT || 3000
+const port = 3000
 
 // Define the secret to be used in the JWT signing algorithm.
 const jwtSecret = "example-secret"
