@@ -1,11 +1,11 @@
-//Websocket variables
+
 // const url = "ws://localhost:9876/myWebsocket"
 const wsUrl = "ws://tobbaa.duckdns.org/ws/?token="
 const loginUrl = "/login"
 
 
 
-// Creating Websocket server. (Implement reverse proxy?)
+// Creating Websocket server. 
 var ws;
 
 //DOM Elements
