@@ -1,7 +1,9 @@
 //Websocket variables
 // const url = "ws://localhost:9876/myWebsocket"
-const url = "ws://localhost:9876/"
-const loginUrl = "http://localhost:9876/login"
+const wsUrl = "ws://tobbaa.duckdns.org/ws/?token="
+const loginUrl = "/login"
+
+
 
 // Creating Websocket server. (Implement reverse proxy?)
 var ws;
@@ -93,7 +95,7 @@ const openWsConnection = (jwtAuth) => {
         ws.close();
     }
 
-    ws = new WebSocket("ws://localhost:9876/ws?token=" + jwtAuth);
+    ws = new WebSocket(wsUrl + jwtAuth);
 
     ws.onopen = (event) => {
         console.log("WebSocket connection established.");

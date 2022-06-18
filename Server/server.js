@@ -6,15 +6,19 @@ const url = require('url');
 const path = require("path");
 const Game = require('./Game.js'); // Import Game class
 const app = express()
-const port = 3000
+const port = 6000
 
 // Define the secret to be used in the JWT signing algorithm.
 const jwtSecret = "example-secret"
 
 const players = [];
 var game;
+console.log(`yo`)
+app.use(express.static(path.join("/home/pi/Projects/WebSocketGame/Client")))
 
-app.use("/", express.static(path.resolve(__dirname, "../client")))
+app.get('/', (req, res) => {
+    res.send({ message: 'Hello WWW!' });
+});
 
 app.post('/login', function (req, res) {
     // console.log(JSON.stringify(req.headers));
@@ -30,6 +34,7 @@ myServer.on('upgrade', async function upgrade(request, socket, head) {      //ha
     //emit connection when request accepted
     wsServer.handleUpgrade(request, socket, head, function done(ws) {
         wsServer.emit('connection', ws, request);
+        console.log('upgrade')
     });
 });
 
